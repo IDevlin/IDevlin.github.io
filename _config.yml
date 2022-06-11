@@ -104,7 +104,7 @@ analytics:
 author:
   name             : "Jose Linardo"
   avatar           : "/assets/images/myAvatar.png" 
-  bio              : &description "Never Stop Learning Life Never Stop Teaching" 
+  bio              : &description "Never Stop Learning" 
   location         : "Somewhere"
   #email            :  "joselinardo01@gmail.com"
   links:
