@@ -23,6 +23,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-align: justify;
   min-height: 100vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -119,6 +120,7 @@ body {
   /* paragraph indents */
   p {
     margin: 0 0 $indent-var;
+    text-align: justify;
 
     /* sibling indentation*/
     @if $paragraph-indent == true {
