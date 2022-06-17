@@ -11,5 +11,5 @@ Primera publicación :) Logré crear un blog en githubpages! el motivo por el qu
 
 
 
-[frontend-mentor]: [https://www.frontendmentor.io/]
-[30DaysOf-JavaScript]: [https://github.com/Asabeneh/30-Days-Of-JavaScript]
+[frontend-mentor]:     https://www.frontendmentor.io/
+[30DaysOf-JavaScript]: https://github.com/Asabeneh/30-Days-Of-JavaScript
