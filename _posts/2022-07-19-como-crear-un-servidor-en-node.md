@@ -71,7 +71,8 @@ El servidor procesa la solicitud y emite una respuesta; similar a la solicitud p
   + Nativo - http
   + Terceros - express, fastify, hapy, koa...  
 
-  ### Paso 1: instalaciones y dependencias 
+
+### Paso 1. Instalaciones 
 
   + Previamente tener instalado Node e iniciar la consola en VS code con ctrl + ñ
   + Inicializar un package json dentro de la carpeta con el comando npm init -- y 
@@ -121,7 +122,7 @@ $ "type": "module"
    ```js
     $ npm run dev
    ```
-### Paso 2: 
+### Paso 2. Creando el servidor 
 
 En este punto vamos a utilizar la libreria nativa de http usando el module. dentro de un archivo .js;
 esto nos devolvera una instancia de tipo servidor
@@ -157,15 +158,18 @@ lastName: 'lastname'}
 
    httpServer.listen(3000)
    ```
+
+## 4. Peticiones con Thunder client
+
+Una de las opciones para probar nuestras solicitudes HTTP es usar una extencion de visual studio llamada thunder client
+
 Como vemos si escribimos en el navegador http://localhost:3000 obtendremos como respuesta un string que representa un objeto de JavaScript
 
+![thunder client ](/assets/images/thunder-client.png)
 
+## 5. Concluciones
 
-
-
-
-
-
+hasta el momento cubrimos lo basico de montar un servidor con las funciones nativas de Node pero ahora tenemos mas problemas, no sabemos la ruta tampoco el metodo, para todas las rutas nos va devolver lo mismo, solo tenemos una unica función para todos los verbos (GET, POS, DELETE etc..) y todos los metodos; ahora lo que necesitamos es filtrar esta solicitud; vemos la complejidad que realmente tiene todo esto y porque existen librerias de terceros como express para facilitar el desarrollo en el proximo post [Request HTTP en node][request-en-node]
 
 
 
@@ -174,7 +178,7 @@ Como vemos si escribimos en el navegador http://localhost:3000 obtendremos como 
 [json]:     https://#/
 [http]: https://#
 [api]: https://#
-
+[request-en-node]: https://idevlin.github.io/node/request-http-en-node/
 
 
 
