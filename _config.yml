@@ -104,7 +104,7 @@ analytics:
 author:
   name             : "Jose"
   avatar           : "/assets/images/myAvatar.png" 
-  bio              : "Desarrollador front-end, JavaScript, CSS, React pero sé algunas cosas de back-end;
+  bio              : "Desarrollador front-end, JavaScript, CSS, React, pero sé algunas cosas de back-end;
                       Node con Express, MongoDB y alguna otra tecnología" 
   #location         : "Somewhere"
   #email            :  "joselinardo01@gmail.com"

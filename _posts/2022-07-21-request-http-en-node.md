@@ -1,7 +1,7 @@
 ---
 title:  "Request HTTP en Node"
-categories: Node 
-tags: backend 
+categories: backend 
+tags: Node  
 toc: true
 toc_sticky: true
 sidebar:
@@ -10,7 +10,7 @@ sidebar:
 
 ## 1. Analisis  
 
-> Ya vimos en él [anterior post][como-crear-servidor-en-node] como crear una única función capaz de responder a cualquier solicitud HTTP, pero incapaz de distinguir que necesita el usuario, para poder hacer esa distinción necesitamos datos que nos del cliente como la ruta, las cabeceras, el verbo, el body, esa información nos permite decidir que hacer en el servidor y como responder a esas solicitudes. Además veremos la complejidad y porque es útil usar una infraestructura como **Express** para facilitar el desarrollo
+> Ya vimos en él [anterior post][como-crear-servidor-en-node] como crear una única función capaz de responder a cualquier solicitud HTTP; Pero incapaz de distinguir que necesita el usuario, para poder hacer esa distinción necesitamos datos que nos de el cliente, como la ruta, las cabeceras, el verbo, el body, esa información nos permite decidir que hacer en el servidor y como responder a esas solicitudes. Además veremos la complejidad y porque es útil usar una infraestructura como **Express** para facilitar el desarrollo
 
 
 ### 1.1 ¿Qué necesitamos?
@@ -118,13 +118,14 @@ httpserver.listen(3000)
 
 ```
 
-Cuando ejecutamos el req.method, el req.url y el req.headers aun no tenemos el body, solo se tiene una intefaz con la cual se va obteniendo trozos del body para ir conformándolo. El req tiene un sistema de eventos **req.on()** podemos indicar al evento al que queremos reaccionar en este caso cuando se reciba data atrevés del **STREAM** vamos a conformar ese body, entonces se pasa como segundo parámetro una función que será el listener de ese evento 'data', en esta función recibiremos un **chunk** o fragmento que lo que hace esta interfaz es ir dividiendo el body en partes, esto permite liberar memoria porque cargar body uy grandes es un problema, entonces tomamos él data y lo concatenamos con el **chunk** se crea una variable **chunkIndex** y la aumentamos con ++ en cada ejecución para ver cuantas veces se ejecuta. Luego el **res.end()** debe ir condicional a que se obtenga todo él data así que para eso usamos el otro evento **req.on('end')** de esa manera cuando se acaba de ejecutar todas las veces necesarias y obtener toda la data y toda la información responde
+Cuando ejecutamos el req.method, el req.url y el req.headers aun no tenemos el body, solo se tiene una intefaz con la cual se va obteniendo trozos del body para ir conformándolo. El req tiene un sistema de eventos **req.on()** podemos indicar al evento al que queremos reaccionar en este caso cuando se reciba data atrevés del **STREAM** vamos a conformar ese body, entonces se pasa como segundo parámetro una función que será el listener de ese evento 'data', en esta función recibiremos un **chunk** o fragmento que lo que hace esta interfaz es ir dividiendo el body en partes, esto permite liberar memoria porque cargar body muy grandes es un problema, entonces tomamos él data y lo concatenamos con el **chunk** se crea una variable **chunkIndex** y la aumentamos con ++ en cada ejecución para ver cuantas veces se ejecuta antes de crear el body. Luego el **res.end()** debe ir condicional a que se obtenga todo él data así que para eso usamos el otro evento **req.on('end')** de esa manera cuando se acaba de ejecutar todas las veces necesarias y obtener toda la data y toda la información responde
 
 
-Para probar esto podemos ir a [https://json-generator.com/] [json-generator] y con **thunder client** en la parte del body agregar un json de más de 100kb para ver en la consola cuantas veces se ejecuta la función que serian los fragmentos del body que pasan por el **STREAM** con esto entendemos el concepto de eventos, el stream de datos y la bondad de la librería.
+Para probar esto podemos ir a [https://json-generator.com/] [json-generator] y con **thunder client** en la parte del body agregar un json de más de 100kb para ver en la consola cuantas veces se ejecuta la función que serian los fragmentos del body que pasan por el **STREAM** con esto entendemos el concepto de eventos, el stream de datos y la bondad de usar [Express con Node][express-en-node]
 
 ![thunder-client](/assets/images/chunk-data.png)
 
 
 [json-generator]: https://json-generator.com/
-[como-crear-servidor-en-node]: https://idevlin.github.io/node/como-crear-un-servidor-en-node/
+[como-crear-servidor-en-node]: https://idevlin.github.io/backend/como-crear-un-servidor-en-node/
+[express-en-node]: https://idevlin.github.io/backend/express-en-node
