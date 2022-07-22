@@ -1,7 +1,7 @@
 ---
 title:  "Crear Servidor en Node"
-categories: Node 
-tags: backend 
+categories: backend 
+tags: Node
 toc: true
 toc_sticky: true
 sidebar:
@@ -318,7 +318,7 @@ hasta el momento cubrimos lo básico de montar un servidor con las funciones nat
 [json]:     https://#/
 [http]: https://#
 [api]: https://#
-[request-en-node]: https://idevlin.github.io/node/request-http-en-node/
+[request-en-node]: https://idevlin.github.io/backend/request-http-en-node/
 
 
 
