@@ -32,7 +32,7 @@ Podemos crear una constante en este caso la llamare serverExpress para usar la f
 ```js
 import express from 'express';
 
-cosnt serverExpress = express()
+const serverExpress = express()
 ```
 ### 1.5 Agregar el listen()
 Esta funcion tambien tiene un listen que recibe como primer parametro el puerto que va a usar para escuchar y como segundo parametro una funcion callback que se va ejecutar cuando este escuchando. Definimos una constante PORT para almacenar el puerto en ese caso usare el puerto 3000 de mi maquina local 
@@ -41,7 +41,7 @@ Esta funcion tambien tiene un listen que recibe como primer parametro el puerto 
 import express from 'express';
 
 const PORT = 3000
-cosnt serverExpress = express()
+const serverExpress = express()
 
 serverExpress.listen(PORT, () => {
     console.log(`Servidor creado en el puerto ${PORT}`)
@@ -56,7 +56,7 @@ a estas funciones les podemos pasar un **PATH/Ruta** que sera la url y luego com
 import express from 'express';
 
 const PORT = 3000
-cosnt serverExpress = express()
+const serverExpress = express()
 
 serverExpress.get('/mi-cuenta', (req, res) => {
     res.send('Tu Cuenta')
@@ -75,7 +75,7 @@ para esto tenemos la sintaxis de dos puntos **:** lo que decimos es toda cuenta 
 import express from 'express';
 
 const PORT = 3000
-cosnt serverExpress = express()
+const serverExpress = express()
 
 serverExpress.get('/mi-cuenta/:idcuenta/:otroid', (req, res) => {
     console.log(req.params.idcuenta)
@@ -87,12 +87,12 @@ serverExpress.listen(PORT, () => {
 })
 ```
 ## 1.7 Headers 
-Para los headers podemos usar la propiedad **req.headers**. se puede obtener como un objeto o tambien el **re.get('accept')** con una propiedad a ver si exixte
+Para los headers podemos usar la propiedad **req.headers**. se puede obtener como un objeto o tambien el **re.get('accept')** con una propiedad a ver si existe
 ```js
 import express from 'express';
 
 const PORT = 3000
-cosnt serverExpress = express()
+const serverExpress = express()
 
 serverExpress.get('/mi-cuenta/:idcuenta/:otroid', (req, res) => {
     console.log(req.headers);
@@ -112,7 +112,7 @@ El response ya lo tenenemos, tenemos el **status()** el **send()** y algunos otr
 import express from 'express';
 
 const PORT = 3000
-cosnt serverExpress = express()
+const serverExpress = express()
 
 serverExpress.get('/mi-cuenta/:idcuenta/:otroid', (req, res) => {
     console.log(req.headers);
@@ -140,7 +140,7 @@ que transforma la data que nos llega en un tipo de dato Json, Xml, Form-encore, 
 import express from 'express';
 
 const PORT = 3000;
-cosnt serverExpress = express();
+const serverExpress = express();
 
 // funcionan para todos los PATH 
 serverExpresss.use(express.json()); //Middleware para admitir formato json
@@ -162,9 +162,6 @@ serverExpress.listen(PORT, () => {
     console.log(`Servidor creado en el puerto ${PORT}`);
 })
 ```
-
-
-
 
 
 
