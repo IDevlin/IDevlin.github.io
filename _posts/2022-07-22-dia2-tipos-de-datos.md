@@ -35,17 +35,18 @@ Son datos que no pueden ser modificados pueden asignarse a una variable pero no 
 
 ### Nivel 1
 
+
  1. Declare una variable llamada challenge y asígnele un valor inicial '30 días de JavaScript'.
  ```js
  let challenge = '30 días de JavaScript'
  ```
-
 2. Imprime la cadena en la consola del navegador usando console.log()
 ```js
 console.log(challenge);
  ```
  
 3. Imprime la longitud de la cadena en la consola del navegador usando console.log()
+
 ```js
 console.log(challenge.longitud)
  ```
