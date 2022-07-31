@@ -268,7 +268,7 @@ console.log(`${año_}/${mes_}/${día_}/${horas_}:${minutos}`);
 console.log(`${día_}/${mes_}/${año_}/${horas_}:${minutos}`);
 ```
 
-## Nivel 3
+### Nivel 3
 
 1). Crear un formato de hora legible por humanos usando el objeto de fecha y hora. La hora y el minuto deben ser siempre dos dígitos (7 horas deben ser 07 y 5 minutos deben ser 05)
    almohadillaInicio(2,'0')
