@@ -115,7 +115,7 @@ El servidor procesa la solicitud y emite una respuesta; similar a la solicitud, 
 
 
 
-  ## 3. HTTP en Jode
+  ## 3. HTTP en Node
 
 
 
